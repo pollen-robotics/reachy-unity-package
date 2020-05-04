@@ -53,6 +53,8 @@ namespace Reachy
         const int resWidth = 320;
         const int resHeight = 240;
 
+        Texture2D texture;
+
         void Start()
         {
             name2motor = new Dictionary<string, Motor>();
@@ -65,6 +67,7 @@ namespace Reachy
 
             leftEye.targetTexture = new RenderTexture(resWidth, resHeight, 0);
             rightEye.targetTexture = new RenderTexture(resWidth, resHeight, 0);
+            texture = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false);
             StartCoroutine("UpdateCameraData");
         }
 
@@ -93,7 +96,6 @@ namespace Reachy
 
         string GetEyeRawTextureData(Camera camera)
         {
-            Texture2D texture = new Texture2D(resWidth, resHeight, TextureFormat.RGB24, false);
             RenderTexture.active = camera.targetTexture;
             texture.ReadPixels(new Rect(0, 0, resWidth, resHeight), 0, 0);
             texture.Apply();
