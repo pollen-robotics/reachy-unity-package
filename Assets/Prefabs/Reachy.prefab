@@ -1079,6 +1079,8 @@ GameObject:
   - component: {fileID: 223221718495531022}
   - component: {fileID: 223221718494565070}
   - component: {fileID: 1249134309}
+  - component: {fileID: 2146183443}
+  - component: {fileID: 2146183447}
   m_Layer: 0
   m_Name: Left Fix Finger
   m_TagString: Untagged
@@ -1166,6 +1168,69 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0001395883, y: 0.000546267, z: 0.00035999977}
   m_Center: {x: -0.0002050292, y: -0.0005831325, z: 1.9325784e-11}
+--- !u!171741748 &2146183443
+ArticulationBody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223221718496824336}
+  m_Enabled: 1
+  m_Mass: 0.05
+  m_ParentAnchorPosition: {x: -1.7773057e-10, y: 0.000000001775561, z: -0.000002000242}
+  m_ParentAnchorRotation: {x: 0, y: 0, z: 0.70710695, w: 0.70710695}
+  m_AnchorPosition: {x: 0, y: 0, z: 0}
+  m_AnchorRotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+  m_ComputeParentAnchor: 1
+  m_ArticulationJointType: 0
+  m_LinearX: 2
+  m_LinearY: 2
+  m_LinearZ: 2
+  m_SwingY: 2
+  m_SwingZ: 2
+  m_Twist: 2
+  m_XDrive:
+    lowerLimit: 0
+    upperLimit: 0
+    stiffness: 0
+    damping: 0
+    forceLimit: 3.4028235e+38
+    target: 0
+    targetVelocity: 0
+  m_YDrive:
+    lowerLimit: 0
+    upperLimit: 0
+    stiffness: 0
+    damping: 0
+    forceLimit: 3.4028235e+38
+    target: 0
+    targetVelocity: 0
+  m_ZDrive:
+    lowerLimit: 0
+    upperLimit: 0
+    stiffness: 0
+    damping: 0
+    forceLimit: 3.4028235e+38
+    target: 0
+    targetVelocity: 0
+  m_LinearDamping: 0.05
+  m_AngularDamping: 0.05
+  m_JointFriction: 0.05
+  m_Immovable: 0
+  m_UseGravity: 1
+--- !u!114 &2146183447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223221718496824336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f183b9d26345c4697264dfdcfc7fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentForce: 0
 --- !u!1 &223221718496824338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,8 +1502,8 @@ ArticulationBody:
   m_GameObject: {fileID: 223221718496824340}
   m_Enabled: 1
   m_Mass: 0.08
-  m_ParentAnchorPosition: {x: 0.0003700004, y: -0.00039999848, z: -3.201421e-10}
-  m_ParentAnchorRotation: {x: 0.000000059604634, y: 0.7071068, z: 0.000000059604634, w: -0.7071067}
+  m_ParentAnchorPosition: {x: 0.00037000055, y: -0.00039999853, z: 2.910383e-10}
+  m_ParentAnchorRotation: {x: 0.00000008940698, y: 0.7071068, z: 0.00000008940697, w: -0.7071068}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0.70710677, z: 0, w: -0.70710677}
   m_ComputeParentAnchor: 1
@@ -2048,15 +2113,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223221718496824350}
-  m_LocalRotation: {x: -0.7071068, y: 9.857167e-15, z: 0.000000033188815, w: 0.7071067}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: -5.32907e-16, y: -3.521393e-11, z: -0.0003250003}
-  m_LocalScale: {x: -1, y: -1, z: -1.0000001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 223221718496333872}
   - {fileID: 223221718496333876}
   m_Father: {fileID: 223221718496333884}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 180, z: 0}
 --- !u!33 &223221718495531036
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2144,7 +2209,7 @@ ArticulationBody:
   m_Enabled: 1
   m_Mass: 0.1
   m_ParentAnchorPosition: {x: 1.7790457e-10, y: 2.051633e-10, z: -0.0003249999}
-  m_ParentAnchorRotation: {x: -0.49999997, y: 0.49999994, z: -0.5, w: 0.49999994}
+  m_ParentAnchorRotation: {x: -0.49999997, y: 0.5, z: 0.5, w: -0.49999994}
   m_AnchorPosition: {x: 0, y: 0, z: 0}
   m_AnchorRotation: {x: 0, y: 0.70710677, z: 0, w: 0.70710677}
   m_ComputeParentAnchor: 1
@@ -2368,6 +2433,8 @@ MonoBehaviour:
     presentPosition: 0
   leftEye: {fileID: 223221718497938976}
   rightEye: {fileID: 223221718497938978}
+  leftGripperForceSensor: {fileID: 2146183447}
+  rightGripperForceSensor: {fileID: 599455257}
 --- !u!65 &665823277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3146,6 +3213,8 @@ GameObject:
   - component: {fileID: 223221718495531114}
   - component: {fileID: 223221718494564906}
   - component: {fileID: 1987376944}
+  - component: {fileID: 599455256}
+  - component: {fileID: 599455257}
   m_Layer: 0
   m_Name: Right Fix Finger
   m_TagString: Untagged
@@ -3233,6 +3302,69 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00015147176, y: 0.0005419578, z: 0.00035999992}
   m_Center: {x: -0.0001990875, y: -0.0005809832, z: 1.9853433e-10}
+--- !u!171741748 &599455256
+ArticulationBody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223221718496824432}
+  m_Enabled: 1
+  m_Mass: 1
+  m_ParentAnchorPosition: {x: 4.367602e-10, y: 0.0000020000286, z: 0.000000004423784}
+  m_ParentAnchorRotation: {x: 0.50000006, y: -0.49999988, z: 0.4999999, w: 0.4999999}
+  m_AnchorPosition: {x: 0, y: 0, z: 0}
+  m_AnchorRotation: {x: 0, y: 0, z: 0.70710677, w: 0.70710677}
+  m_ComputeParentAnchor: 1
+  m_ArticulationJointType: 0
+  m_LinearX: 2
+  m_LinearY: 2
+  m_LinearZ: 2
+  m_SwingY: 2
+  m_SwingZ: 2
+  m_Twist: 2
+  m_XDrive:
+    lowerLimit: 0
+    upperLimit: 0
+    stiffness: 0
+    damping: 0
+    forceLimit: 3.4028235e+38
+    target: 0
+    targetVelocity: 0
+  m_YDrive:
+    lowerLimit: 0
+    upperLimit: 0
+    stiffness: 0
+    damping: 0
+    forceLimit: 3.4028235e+38
+    target: 0
+    targetVelocity: 0
+  m_ZDrive:
+    lowerLimit: 0
+    upperLimit: 0
+    stiffness: 0
+    damping: 0
+    forceLimit: 3.4028235e+38
+    target: 0
+    targetVelocity: 0
+  m_LinearDamping: 0.05
+  m_AngularDamping: 0.05
+  m_JointFriction: 0.05
+  m_Immovable: 0
+  m_UseGravity: 1
+--- !u!114 &599455257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223221718496824432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f183b9d26345c4697264dfdcfc7fbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentForce: 0
 --- !u!1 &223221718496824434
 GameObject:
   m_ObjectHideFlags: 0

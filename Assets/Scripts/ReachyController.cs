@@ -28,6 +28,8 @@ namespace Reachy
         public List<SerializableMotor> motors;
         public string left_eye;
         public string right_eye;
+        public float left_force_sensor;
+        public float right_force_sensor;
     }
 
     [System.Serializable]
@@ -47,6 +49,7 @@ namespace Reachy
     {
         public Motor[] motors;
         public Camera leftEye, rightEye;
+        public ForceSensor leftGripperForceSensor, rightGripperForceSensor;
         private Dictionary<string, Motor> name2motor;
         private string leftEyeFrame, rightEyeFrame;
 
@@ -124,6 +127,8 @@ namespace Reachy
                 motors = new List<SerializableMotor>(), 
                 left_eye=leftEyeFrame,
                 right_eye=rightEyeFrame,
+                left_force_sensor=leftGripperForceSensor.currentForce,
+                right_force_sensor=rightGripperForceSensor.currentForce,
             };
 
             for (int i = 0; i < motors.Length; i++)
