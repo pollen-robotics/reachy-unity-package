@@ -1,4 +1,4 @@
-# Unity package for the Reachy robot
+# Unity package for the Reachy 2019 robot
 
 ![](https://pollen-robotics.github.io/reachy-docs/img/simu/flippingTable.gif)
 
