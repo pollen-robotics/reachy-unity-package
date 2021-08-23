@@ -12,7 +12,7 @@ Provides a Prefab for the full Robot:
 
 This package is open-sourced and released under an [Apache License v2.0](./LICENSE).
 
-For more information on how to get started: https://pollen-robotics.github.io/reachy-docs/
+For more information on how to get started: https://docs.pollen-robotics.com
 
 ## Reachy: Open source interactive robot to explore real-world applications!
 
